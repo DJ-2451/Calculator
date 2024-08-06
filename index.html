@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/51fad11e3c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="part1" id="part1">
+        <div class="display">
+          <div class="pic">
+            <img
+              src="http://clipground.com/images/clipart-kids-math-16.png"
+              alt=""
+            />
+          </div>
+          <div class="inputs">
+            <input type="text" id="subInput" disabled />
+            <input type="text" id="valInput" value="0" />
+          </div>
+        </div>
+
+        <div class="buttons">
+          <!-- row1 -->
+          <button onclick="clearAll()">C</button>
+          <button onclick="getValue('%')">%</button>
+          <button onclick="getValue('/')">/</button>
+          <button onclick="removeLastNum()">
+            <i class="fa-solid fa-delete-left"></i>
+          </button>
+          <!-- row2 -->
+          <button onclick="getValue('7')">7</button>
+          <button onclick="getValue('8')">8</button>
+          <button onclick="getValue('9')">9</button>
+          <button onclick="getValue('*')">x</button>
+          <!-- row3 -->
+          <button onclick="getValue('4')">4</button>
+          <button onclick="getValue('5')">5</button>
+          <button onclick="getValue('6')">6</button>
+          <button onclick="getValue('-')">-</button>
+          <!-- row4 -->
+          <button onclick="getValue('1')">1</button>
+          <button onclick="getValue('2')">2</button>
+          <button onclick="getValue('3')">3</button>
+          <button onclick="getValue('+')">+</button>
+          <!-- row5 -->
+          <button onclick="getValue('00')">00</button>
+          <button onclick="getValue('0')">0</button>
+          <button onclick="getValue('.')">.</button>
+          <button onclick="solve()" id="solve">=</button>
+        </div>
+      </div>
+
+      <div class="part2">
+        <div class="heading">
+          <h1>History</h1>
+        </div>
+        <div class="history" id="empty"></div>
+        <div class="clearAll">
+          <button onclick="clearHistory()">ClearAll</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
